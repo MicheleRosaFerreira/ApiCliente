@@ -1,0 +1,7 @@
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.csproj.AssemblyReference.cache
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.AssemblyInfoInputs.cache
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.AssemblyInfo.cs
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.csproj.CoreCompileInputs.cache
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\michele.ferreira\source\repos\Sistema_C#\ApiCliente\ApiCliente\obj\Debug\net6.0\ApiCliente.MvcApplicationPartsAssemblyInfo.cache
