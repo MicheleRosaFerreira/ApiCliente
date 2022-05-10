@@ -6,7 +6,7 @@ namespace ApiCliente.Controllers
     [Route("(controller)")]
     public class ClienteController : ControllerBase
     {
-        private static List<ClienteModels> _clienteModels = new List<ClienteModels>()
+        private static List<ClienteModels> _lista = new List<ClienteModels>()
         {
             new ClienteModels()
             {
@@ -24,25 +24,25 @@ namespace ApiCliente.Controllers
                 dataNascimento=new DateTime(15041995)
             }
         };
-      
+
         [HttpGet]
         [Route("/api/v1/cliente/{cpf}")]
         public ActionResult<ClienteModels> Get(string cpf)
         {
-            var cliente = _clienteModels.FirstOrDefault(c => c.cpf == cpf);
-          
+            var cliente = _lista.FirstOrDefault(c => c.cpf == cpf);
+
             if (cliente == null)
             {
                 return NotFound("cliente não encontrado");
             }
             return Ok(cliente);
         }
+
         [HttpGet]
         [Route("/api/v1/cliente")]
-
         public List<ClienteModels> GetAll()
         {
-            return _clienteModels;
+            return _lista;
         }
 
 
@@ -58,7 +58,7 @@ namespace ApiCliente.Controllers
                 {
                     return BadRequest("cliente invalido");
                 }
-                _clienteModels.Add(cliente);
+                _lista.Add(cliente);
                 return Ok("Cliente cadastrado com sucesso!");
             }
             catch
@@ -77,7 +77,7 @@ namespace ApiCliente.Controllers
                 {
                     return BadRequest("Erro ao atualizar cliente");
                 }
-                var novoCliente = _clienteModels.FirstOrDefault(c => c.cpf == cpf);
+                var novoCliente = _lista.FirstOrDefault(c => c.cpf == cpf);
                 if (novoCliente != null)
                 {
                     return Ok("cliente atualizado com sucesso");
@@ -86,21 +86,23 @@ namespace ApiCliente.Controllers
             catch
             {
                 return BadRequest("cliente não autualizado");
-            } return cliente;
+            }
+            return cliente;
         }
-       [HttpDelete]
-       [Route("/api/v1/cliente{cpf}")]
-        
-       public ActionResult<ClienteModels> Remove(string cpf)
-           
-        {
-           if(cpf != null)
+        [HttpDelete]
+        [Route("/api/v1/cliente{cpf}")]
+
+        public ActionResult<ClienteModels> Remove(string cpf)
+
+        { var cliente = _lista.FirstOrDefault(c => c.cpf == cpf);   
+
+            if (cliente != null)
             {
-               _clienteModels = _clienteModels.Where(c => c.cpf == cpf).ToList();
+                _lista.Remove(cliente!);
             }
             return Ok("Cliente deletado");
         }
 
     }
-    
+
 }
