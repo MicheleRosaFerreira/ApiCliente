@@ -13,7 +13,7 @@ namespace ApiCliente.Controllers
                 nome = "Michele",
                 sobrenome = "Ferreira",
                 cpf = "123.456.789-09",
-                dataNascimento = new DateTime(01041998)
+                dataNascimento = new DateTime(1998,04,01)
             },
 
             new ClienteModels()
@@ -21,7 +21,7 @@ namespace ApiCliente.Controllers
                 nome = "Moises",
                 sobrenome = "Cruvinel",
                 cpf = "142.567.345-87",
-                dataNascimento=new DateTime(15041995)
+                dataNascimento=new DateTime(1995,04,15)
             }
         };
 
